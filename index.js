@@ -39,7 +39,7 @@ const strategy = new Auth0Strategy(
         clientSecret: process.env.AUTH0_CLIENT_SECRET,
         callcackURL: process.env.AUTH0_CALLBACK_URL
     }, 
-    function(acessToken, refreshToken, extraParams, profile,done) {
+    function(acessToken, refreshToken, extraParams, profile, done) {
         return done(null, profile);
     }
 );
